@@ -1,0 +1,8 @@
+clc clear all; close all; f=5; fs = 150; t = [0:1/fs:1]; x= sin(2*pi*f*t); X = fftshift(fft(x)); X_mag = abs(X); y
+= [-fs/2:1:fs/2]; subplot(2,1,1); plot(t,x); xlabel('Time'); title('Sine Wave Signal'); ylabel('Amplitude');
+subplot(2,1,2); plot(y,X_mag); xlabel('Frequency'); title('Power Spectrum Sine Wave Signal');
+ylabel('Power');
+clc clear all; close all; f=5; fs = 150; t = [0:1/fs:1]; x= square(2*pi*f*t); X = fftshift(fft(x)); X_mag =
+abs(X); y = [-fs/2:1:fs/2]; subplot(2,1,1); plot(t,x); xlabel('Time'); title('Square Wave Signal');
+ylabel('Amplitude'); subplot(2,1,2); plot(y,X_mag); xlabel('Frequency'); title('Power Spectrum Square
+Wave Signal'); ylabel('Power');

@@ -1,0 +1,5 @@
+clc clear all; close all; x = -1:0.001:1; fm = 2; a = cos(2*pi*x*fm); subplot(3,1,1); plot(x,a);
+title('Message Signal'); xlabel('Time'); ylabel('Amplitude'); fc = 20; c = cos(2*pi*fc*x) subplot(3,1,2);
+plot(x,c); title('Carrier Signal'); xlabel('Time'); ylabel('Amplitude'); kf = 5; z = cos(2*pi*fc*x +
+kf*sin(2*pi*fm*x)) subplot(3,1,3); plot(x,z); title('Frequency Modulated Signal'); xlabel('Time');
+ylabel('Amplitude');
